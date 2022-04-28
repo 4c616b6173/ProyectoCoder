@@ -55,7 +55,7 @@ ROOT_URLCONF = 'webApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/matia/Documents/.python/project1/webApp/plantillas1/'],
+        'DIRS': ['C:/Users/matia/Documents/GitHub/ProyectoCoder/webApp/plantillas1'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
