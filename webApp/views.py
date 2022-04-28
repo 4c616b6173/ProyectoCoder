@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from datetime import datetime
+from django.shortcuts import render
 from django.template import Template, Context, loader
 # Importo settings para poder usar una variable del archivo settings.py
 from django.conf import settings
@@ -39,5 +40,10 @@ def probandoTemplates(self):
     # miContexto = Context(diccionario)
     # documento = plantilla.render(miContexto)
     documento = plantilla.render(diccionario)
+    return HttpResponse(documento)
+
+def home(request):
+    plantilla = loader.get_template('home.html')
+    documento = plantilla.render()
     return HttpResponse(documento)
 

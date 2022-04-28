@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from webApp.views import saludo, segunda_vista, diaDeHoy, miNombreEs, probandoTemplates
+from webApp.views import saludo, segunda_vista, diaDeHoy, miNombreEs, probandoTemplates, home
 
 
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     path('diadehoy/', diaDeHoy),
     path('miNombreEs/<nombre>', miNombreEs),
     path('plantilla/', probandoTemplates),
+    path('', home),
     path('AppCoder/', include('AppCoder.urls')),
 ]
