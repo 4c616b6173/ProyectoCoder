@@ -4,6 +4,10 @@ from django.db import models
 class Curso(models.Model):
     nombre = models.CharField(max_length=40)
     camada = models.IntegerField()
+    duracion = models.IntegerField(default=0)
+    def __str__(self):
+        txt = '{0} - {1}'
+        return txt.format(self.camada, self.nombre)
 
 class Profesor(models.Model):
     # CharField = campo de texto
