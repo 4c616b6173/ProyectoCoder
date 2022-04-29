@@ -17,7 +17,9 @@ def about(request):
     return  render(request, 'AppCoder/about.html')
 
 def cursos(request):
-    return render(request, 'AppCoder/cursos.html')
+    
+    return render(request, 'cursos.html')
+    
 
 def profesores(request):
     return render(request, 'AppCoder/profesores.html')
@@ -45,10 +47,10 @@ def cursoFormulario(request):
 
             curso.save()
 
-            return render(request, "AppCoder/inicio.html")
+            return render(request, "inicio.html")
         
     else:
 
         miFormulario = CursoFormulario()
 
-    return render(request, "AppCoder/cursoFormulario.html", {"miFormulario":miFormulario})
+    return render(request, "cursoFormulario.html", {"miFormulario":miFormulario})
